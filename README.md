@@ -1,7 +1,10 @@
 # wiki-api
 RESTful API
 
-# Front-End: 
+# Front-end: 
+* Bootstrap 4.5.1
+
+# Back-End: 
 * NodeJS
 * ExpressJS
 * MongoDB 
@@ -9,7 +12,6 @@ RESTful API
 * Body-parser
 * EJS
 
-# Front-end: 
-* Bootstrap 4.5.1
+
 
 
