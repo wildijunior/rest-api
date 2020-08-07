@@ -1,0 +1,234 @@
+<%- include('partials/header');  %>
+
+<!-- div scroll to top float button -->
+<div id="scrolltotop_parent">
+    <div tabindex="0" id="scrolltotop_arrow">
+    </div>
+</div>
+
+<div class="container" style="padding-top: 30px;">
+    <h1>Introdução</h1>
+    <p>Bem-vindo a versão 1 da API de artigos. <br />
+        Abaixo a tabela com os métodos e devidas ações esperadas em nosso API Endpoint.
+    </p>
+    <table class="table table-hover table-dark">
+        <thead>
+            <tr style="color: #a683e3;">
+                <th scope="col">HTTP Verbs</th>
+                <th scope="col">/artigos</th>
+                <th scope="col">artigos/&lttitulo&gt</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>GET</td>
+                <td>Busca <b>todos</b> os artigos</td>
+                <td>Busca o artigo com o &lttitulo&gt especifico</td>
+            </tr>
+            <tr>
+                <td>POST</td>
+                <td>Cria <b>um</b> novo artigo</td>
+                <td> - </td>
+            </tr>
+            <tr>
+                <td>PUT</td>
+                <td> - </td>
+                <td>Update <b>completo no &lttitulo&gt</b></td>
+            </tr>
+            <tr>
+                <td>PATCH</td>
+                <td> - </td>
+                <td>Update <b>em campos específicos</b> do &lttitulo&gt</td>
+            </tr>
+            <tr>
+                <td>DELETE</td>
+                <td>Deleta <b>todos</b> os artigos</td>
+                <td>Deleta <b>o</b> artigo em &lttitulo&gt</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <small>
+        <p>Para realizar o teste na api, você precisa ser familiarizado com qualquer GUI de testes de API, tais como: <a
+                href="https://www.postman.com/">Postman</a> e/ou <a href="https://insomnia.rest/">Insomnia</a></p>
+    </small>
+
+    <!-- ENDPOINT -->
+    <br />
+    <h3>ENDPOINT URL</h3>
+    <p>Nosso API Endpoint de servidor/serviço.</p>
+
+    <h5 style="font-size: 1rem;">
+        <em>localhost:3000/artigos</em>
+    </h5>
+
+    <!-- GET -->
+    <br />
+    <h3>GET - &ltall&gt</h3>
+    <p>Utilizamos o método GET, para requisitar todos os artigos.</p>
+    <h5 style="font-size: 1rem;">
+        <em>localhost:3000/artigos</em>
+    </h5>
+
+    <!-- POST -->
+    <br />
+    <h3>POST</h3>
+    <p>Utilizamos o método POST, para inserir um novo document(artigo).
+        <br />Seguindo as configurações abaixo:
+    </p>
+    <h5 style="font-size: 1rem;">
+        <em>localhost:3000/artigos</em>
+    </h5>
+    <!-- TABLE BODY-CONFIG -->
+    <br />
+    No Postman ou Insomnia, faça sua requição atraves do metodo POST e insira as seguintes configurações no body:
+    <h6>BODY</h6>
+    <input type="radio" checked>
+    <em>x-www-form-urlencoded</em>
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">KEY</th>
+                <th scope="col">VALUE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>title</td>
+                <td>inserir titulo desejado</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>content</td>
+                <td>Inserir conteudo</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- DELETE -->
+    <br />
+    <h3>DELETE - &ltall&gt</h3>
+    <p>Usamos o método DELETE, para deletar todos os artigos. Faça o DELETE request via postman e/ou insomnia.</p>
+    <h5 style="font-size: 1rem;">
+        <em>DELETE -> localhost:3000/artigos</em>
+    </h5>
+
+    <!-- GET artigo especifico -->
+    <br />
+    <h3>GET - &lttitle&gt específico</h3>
+    <p>Através do método GET, vamos requisitar um artigo especifico, para fazer a requisição:</p>
+    <h5 style="font-size: 1rem;">
+        <em>
+            GET -> localhost:3000/artigos/&lttitle&gt</em>
+        <br />
+        <br />
+        <small>
+            <b>Lembre-se que se você for requisitar um título que contém espaço, deve inserir o HTML encoded '%20'
+                entre
+                as
+                palavras, ele representa o espaço.<br />Ex: localhost:3000/artigos/Chuck%20Norris</b></small>
+
+    </h5>
+
+    <!-- PUT -->
+    <br />
+    <h3>PUT - Update para todos os campos</h3>
+    <p>Utilizamos o método PUT, para realizar um update completo dos dados de um document.
+        <br />Seguindo as configurações abaixo:
+    </p>
+    <h5 style="font-size: 1rem;">
+        <em>
+            PUT -> localhost:3000/artigos/Carrinho%20de%20compras </em><br />
+    </h5>
+    <!-- TABLE BODY-CONFIG -->
+    <br />
+    No Postman ou Insomnia, faça sua requição atraves do metodo PUT e insira as seguintes configurações no body:
+    <h6>BODY</h6>
+    <input type="radio" checked>
+    <em>x-www-form-urlencoded</em>
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">KEY</th>
+                <th scope="col">VALUE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>title</td>
+                <td>inserir novo titulo</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>content</td>
+                <td>Inserir novo conteudo</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <small><b>*** Lembre-se que ao utilizar o método PUT você altera todos os campos mesmo especificando apenas
+            um.<br />
+            *** Pois este método afeta do document inteiro, não apenas um campo.<br />
+            *** O método PUT é utilizado para realizar update do document inteiro e não apenas em um campo.</b></small>
+    <br />
+
+    <!-- PATCH -->
+    <br />
+    <h3>PATCH - Update de &ltkey&gt específica</h3>
+    <p>Utilizamos o método PATCH, para realizar update de um campo especifico no document.
+    </p>
+    <h5 style="font-size: 1rem;">
+        <em> PATCH -> localhost:3000/artigos/Chuck%20Norris</em>
+    </h5>
+    <!-- TABLE BODY-CONFIG -->
+    <br />
+    No Postman ou Insomnia, faça PATCH request e insira <b>a KEY</b> que deseja atualizar no
+    body:
+    <h6>BODY</h6>
+    <input type="radio" checked>
+    <em>x-www-form-urlencoded</em>
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">KEY</th>
+                <th scope="col">VALUE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>title</td>
+                <td>inserir novo titulo</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <small><b>*** Lembre-se que ao utilizar o método PATCH você realizar update em um campo especifico, sem afetar os
+            demais.<br />
+            *** O método PATCH é diferente do PUT, porém ambos servem para realizar update. Tenha cuidado ao
+            utilizar.</b></small>
+    <br />
+
+    <!-- DELETE PARA UM <TITLE> Especifico -->
+    <br />
+    <h3>DELETE - Delete &lttitle&gt especifico</h3>
+    <p>Utilizamos o método DELETE, para realizar delete de um &lttitle&gt especifico.
+        <br />
+        No Postman ou Insomnia, faça o DELETE REQUEST, no final do endpoint você insere o &lttitle&gt especifico que
+        deseja
+        excluir.
+    </p>
+    <h5 style="font-size: 1rem;">
+        <em> DELETE -> localhost:3000/artigos/Pandemia%20Covid</em> <br />
+    </h5>
+</div>
+
+
+
+<%- include('partials/footer');  %>
