@@ -1,7 +1,7 @@
 # wiki-api
 RESTful API
 
-# Front-end: 
+# Front-End: 
 * Bootstrap 4.5.1
 
 # Back-End: 
