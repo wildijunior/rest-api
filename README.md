@@ -12,9 +12,6 @@ RESTful API
 * Body-parser
 * EJS
 
-# Link 
-https://wjr-wiki-api.herokuapp.com/
-
 ### Autor
 Wildi Jr.
 
