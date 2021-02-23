@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  background: #222831;
+  color: #fafafa;
+}
+
+nav{
+  font-family: "Roboto", sans-serif;
+  letter-spacing:2px;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+  font-family: "Nunito", sans-serif;
+  
+}
+
+form{
+  color: #222831;
+
+}
+
+.card {
+  background: #ffc107;
+  padding: 30px;
+  color: #222831;
+  
+}
